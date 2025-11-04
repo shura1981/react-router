@@ -8,7 +8,7 @@ export default function HomePage() {
         initMDB({ Chart });
 
         // Data
-        const dataChartDobuleYAxisExample = {
+        const dataChartDoubleYAxisExample = {
             type: 'bar',
             data: {
                 labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday '],
@@ -37,7 +37,7 @@ export default function HomePage() {
         };
 
         // Options
-        const optionsChartDobuleYAxisExample = {
+        const optionsChartDoubleYAxisExample = {
             options: {
                 scales: {
                     y:
@@ -64,8 +64,8 @@ export default function HomePage() {
         if (chartElement) {
             new Chart(
                 chartElement,
-                dataChartDobuleYAxisExample,
-                optionsChartDobuleYAxisExample
+                dataChartDoubleYAxisExample,
+                optionsChartDoubleYAxisExample
             );
         }
 

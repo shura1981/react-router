@@ -71,7 +71,7 @@ export default function Header() {
                     <li className="sidenav-item">
                         <NavLink className="sidenav-link" to="/about" >
                             <i className="fas fa-chart-area fa-fw me-3"></i>
-                            <span>Webiste traffic</span>
+                            <span>Website traffic</span>
                         </NavLink>
                     </li>
                     <li className="sidenav-item">
