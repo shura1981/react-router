@@ -3,18 +3,18 @@ import { Ripple, initMDB } from "mdb-ui-kit";
 
 export default function AboutPage() {
 
-useEffect(() => {
-// Initialization for ES Users
+  useEffect(() => {
+    // Initialization for ES Users
 
-  initMDB({ Ripple });
+    initMDB({ Ripple });
 
-  document.querySelectorAll('.example-class').forEach((cardRipple) => {
-    new Ripple(cardRipple, {
-      rippleColor: 'light'
-    })
-  });
+    document.querySelectorAll('.example-class').forEach((cardRipple) => {
+      new Ripple(cardRipple, {
+        rippleColor: 'light'
+      })
+    });
 
-}, []);
+  }, []);
 
     return (
         <div className="container">

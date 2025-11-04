@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { Chart, initMDB } from 'mdb-ui-kit/js/chart.es.min.js'
+
 export default function HomePage() {
     useEffect(() => {
         // Initialization for ES Users
@@ -42,12 +43,12 @@ export default function HomePage() {
                     y:
                     {
                         display: true,
-                        position: 'left',
+                        position: 'left' as const,
                     },
                     y1:
                     {
                         display: true,
-                        position: 'right',
+                        position: 'right' as const,
                         grid: {
                             drawOnChartArea: false,
                         },
@@ -59,11 +60,14 @@ export default function HomePage() {
             },
         };
 
-        new Chart(
-            document.getElementById('chart-double-y-axis-example'),
-            dataChartDobuleYAxisExample,
-            optionsChartDobuleYAxisExample
-        );
+        const chartElement = document.getElementById('chart-double-y-axis-example');
+        if (chartElement) {
+            new Chart(
+                chartElement,
+                dataChartDobuleYAxisExample,
+                optionsChartDobuleYAxisExample
+            );
+        }
 
 
     }, []);
