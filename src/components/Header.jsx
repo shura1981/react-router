@@ -45,7 +45,7 @@ export default function Header() {
 
 
     return (
-        <header>
+        <header className='sticky-top'>
             <nav
                 data-mdb-sidenav-init
                 id="sidenav-1"
@@ -115,7 +115,7 @@ export default function Header() {
             <nav
                 data-mdb-navbar-init
                 id="main-navbar"
-                className="navbar navbar-expand-lg bg-body fixed-top"
+                className="navbar navbar-expand-lg bg-body "
             >
                 <div className="container-fluid">
                     <button

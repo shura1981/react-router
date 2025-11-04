@@ -1,130 +1,23 @@
 @import 'mdb-ui-kit/css/mdb.min.css';
 
-// Dark theme palette overrides tuned for MDB variables
-// [data-mdb-theme='dark'] {
-//   --mdb-red: #ff6b6b;
-//   --mdb-pink: #ff85b5;
-//   --mdb-purple: #c79bff;
-//   --mdb-indigo: #a3b5ff;
-//   --mdb-blue: #5b8def;
-//   --mdb-cyan: #4dd0e1;
-//   --mdb-teal: #26a69a;
-//   --mdb-green: #2ecc71;
-//   --mdb-yellow: #ffd54f;
-//   --mdb-orange: #ffa726;
-//   --mdb-white: #ffffff;
-//   --mdb-black: #000000;
-//   --mdb-gray: #9e9e9e;
-//   --mdb-gray-dark: #c5c5c5;
-//   --mdb-gray-50: #121212;
-//   --mdb-gray-100: #181818;
-//   --mdb-gray-200: #1f1f1f;
-//   --mdb-gray-300: #252525;
-//   --mdb-gray-400: #2c2c2c;
-//   --mdb-gray-500: #333333;
-//   --mdb-gray-600: #4f4f4f;
-//   --mdb-gray-700: #757575;
-//   --mdb-gray-800: #9e9e9e;
-//   --mdb-gray-900: #e0e0e0;
-//   --mdb-primary: #5b8def;
-//   --mdb-secondary: #b0bec5;
-//   --mdb-success: #2ecc71;
-//   --mdb-danger: #ff6b6b;
-//   --mdb-warning: #ffb74d;
-//   --mdb-info: #4dd0e1;
-//   --mdb-light: #1f1f1f;
-//   --mdb-dark: #0d0d0d;
-//   --mdb-primary-rgb: 91, 141, 239;
-//   --mdb-secondary-rgb: 176, 190, 197;
-//   --mdb-success-rgb: 46, 204, 113;
-//   --mdb-danger-rgb: 255, 107, 107;
-//   --mdb-warning-rgb: 255, 183, 77;
-//   --mdb-info-rgb: 77, 208, 225;
-//   --mdb-light-rgb: 31, 31, 31;
-//   --mdb-dark-rgb: 13, 13, 13;
-//   --mdb-primary-text-emphasis: #c7d6ff;
-//   --mdb-secondary-text-emphasis: #d3dde2;
-//   --mdb-success-text-emphasis: #b4f5d0;
-//   --mdb-info-text-emphasis: #bef5ff;
-//   --mdb-warning-text-emphasis: #ffe6ba;
-//   --mdb-danger-text-emphasis: #ffccd1;
-//   --mdb-light-text-emphasis: #f5f5f5;
-//   --mdb-dark-text-emphasis: #f5f5f5;
-//   --mdb-primary-bg-subtle: #16213a;
-//   --mdb-secondary-bg-subtle: #1e2529;
-//   --mdb-success-bg-subtle: #10271c;
-//   --mdb-info-bg-subtle: #0f1f22;
-//   --mdb-warning-bg-subtle: #2b1f0f;
-//   --mdb-danger-bg-subtle: #2a1414;
-//   --mdb-light-bg-subtle: #1a1a1a;
-//   --mdb-dark-bg-subtle: #000000;
-//   --mdb-primary-border-subtle: #2f4d87;
-//   --mdb-secondary-border-subtle: #3c4c54;
-//   --mdb-success-border-subtle: #1f5c3d;
-//   --mdb-info-border-subtle: #1f5f68;
-//   --mdb-warning-border-subtle: #5c3c17;
-//   --mdb-danger-border-subtle: #6a272f;
-//   --mdb-light-border-subtle: #2a2a2a;
-//   --mdb-dark-border-subtle: #424242;
-//   --mdb-body-font-family: var(--mdb-font-roboto);
-//   --mdb-body-font-size: 1rem;
-//   --mdb-body-font-weight: 400;
-//   --mdb-body-line-height: 1.6;
-//   --mdb-body-color: #e5e5e5;
-//   --mdb-body-color-rgb: 229, 229, 229;
-//   --mdb-body-bg: #121212;
-//   --mdb-body-bg-rgb: 18, 18, 18;
-//   --mdb-emphasis-color: #ffffff;
-//   --mdb-emphasis-color-rgb: 255, 255, 255;
-//   --mdb-secondary-color: rgba(229, 229, 229, 0.75);
-//   --mdb-secondary-color-rgb: 229, 229, 229;
-//   --mdb-secondary-bg: #1f1f1f;
-//   --mdb-secondary-bg-rgb: 31, 31, 31;
-//   --mdb-tertiary-color: rgba(229, 229, 229, 0.5);
-//   --mdb-tertiary-color-rgb: 229, 229, 229;
-//   --mdb-tertiary-bg: #181818;
-//   --mdb-tertiary-bg-rgb: 24, 24, 24;
-//   --mdb-heading-color: #ffffff;
-//   --mdb-link-color: #8ab4ff;
-//   --mdb-link-color-rgb: 138, 180, 255;
-//   --mdb-link-hover-color: #aec8ff;
-//   --mdb-link-hover-color-rgb: 174, 200, 255;
-//   --mdb-link-decoration: none;
-//   --mdb-link-hover-decoration: none;
-//   --mdb-code-color: #ff85b5;
-//   --mdb-highlight-color: #f5f5f5;
-//   --mdb-highlight-bg: #3a2e0d;
-//   --mdb-border-width: 1px;
-//   --mdb-border-style: solid;
-//   --mdb-border-color: #2a2a2a;
-//   --mdb-border-color-translucent: rgba(255, 255, 255, 0.1);
-//   --mdb-border-radius: 0.25rem;
-//   --mdb-border-radius-sm: 0.25rem;
-//   --mdb-border-radius-lg: 0.5rem;
-//   --mdb-border-radius-xl: 1rem;
-//   --mdb-border-radius-xxl: 2rem;
-//   --mdb-border-radius-2xl: var(--mdb-border-radius-xxl);
-//   --mdb-border-radius-pill: 50rem;
-//   --mdb-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
-//   --mdb-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.35);
-//   --mdb-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.5);
-//   --mdb-box-shadow-inset: inset 0 1px 2px rgba(255, 255, 255, 0.05);
-//   --mdb-focus-ring-width: 0.25rem;
-//   --mdb-focus-ring-opacity: 0.35;
-//   --mdb-focus-ring-color: rgba(138, 180, 255, 0.35);
-//   --mdb-form-valid-color: #2ecc71;
-//   --mdb-form-valid-border-color: #2ecc71;
-//   --mdb-form-invalid-color: #ff6b6b;
-//   --mdb-form-invalid-border-color: #ff6b6b;
-  
-// }
+
+@media (min-width: 1400px) {
+
+   main,
+   header,
+   #main-navbar {
+      padding-left: 240px;
+   }
+}
 
  
 
-@media (min-width: 1400px) {
-  main,
-  header,
-  #main-navbar {
-    padding-left: 240px;
-  }
+#root {
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   min-height: 100dvh;
+}
+
+.sidenav-backdrop{
+   z-index: 1;
 }

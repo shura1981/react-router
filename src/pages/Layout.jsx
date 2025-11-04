@@ -6,7 +6,7 @@ export default function Layout() {
     return (
         <>
             <Header />
-            <main style={{ marginTop: "58px" }}>
+            <main className=" pt-3">
                 <Outlet />
             </main>
             <Footer />
