@@ -1,6 +1,5 @@
-import React from 'react'
 import { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Sidenav, Dropdown, Navbar, Ripple, initMDB } from "mdb-ui-kit";
 
 export default function Header() {
@@ -11,13 +10,13 @@ export default function Header() {
         initMDB({ Sidenav, Dropdown, Navbar, Ripple, });
 
         const sidenav = document.getElementById("sidenav-1");
-        const sidenavInstance = Sidenav.getInstance(sidenav);
+        const sidenavInstance = sidenav ? Sidenav.getInstance(sidenav) : null;
 
-        let innerWidth = null;
+        let innerWidth: number | null = null;
 
         const setMode = () => {
             // Check necessary for Android devices
-            if (window.innerWidth === innerWidth) {
+            if (window.innerWidth === innerWidth || !sidenavInstance) {
                 return;
             }
 
@@ -38,7 +37,9 @@ export default function Header() {
         window.addEventListener("resize", setMode);
 
         return () => {
-            sidenavInstance.hide();
+            if (sidenavInstance) {
+                sidenavInstance.hide();
+            }
             window.removeEventListener("resize", setMode);
         };
     }, []);
@@ -70,7 +71,7 @@ export default function Header() {
                     <li className="sidenav-item">
                         <NavLink className="sidenav-link" to="/about" >
                             <i className="fas fa-chart-area fa-fw me-3"></i>
-                            <span>Webiste traffic</span>
+                            <span>Website traffic</span>
                         </NavLink>
                     </li>
                     <li className="sidenav-item">
