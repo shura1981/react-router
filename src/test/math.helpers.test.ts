@@ -29,7 +29,7 @@ const valuesOfTest: Array<valuesAndResultType> = [
         values: [6, 2],
         result: 3
     }
-]
+];
 // test('test function add', () => {
 //     expect(add(2, 3)).toBe(5);
 // });
@@ -70,4 +70,4 @@ describe('math helper functions', () => {
             expect(res).toBe(result);
         });
     });
-}); 
+});

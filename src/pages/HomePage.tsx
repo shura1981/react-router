@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { Chart, initMDB } from 'mdb-ui-kit/js/chart.es.min.js'
+import { useEffect } from 'react';
+import { Chart, initMDB } from 'mdb-ui-kit/js/chart.es.min.js';
 
 export default function HomePage() {
     useEffect(() => {

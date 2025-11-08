@@ -11,7 +11,7 @@ export default function AboutPage() {
     document.querySelectorAll('.example-class').forEach((cardRipple) => {
       new Ripple(cardRipple, {
         rippleColor: 'light'
-      })
+      });
     });
 
   }, []);
